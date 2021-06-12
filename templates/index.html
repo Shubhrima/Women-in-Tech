@@ -1,0 +1,101 @@
+{% include 'header.html' %}
+
+
+<!--main-->
+<div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                     <!-- Post preview-->
+                <h1 id="scholarships">SCHOLARSHIPS</h1>
+                    {% for post in posts: %}
+                        {%if post['program']=="Scholarship" %}
+
+                    <div class="post-preview">
+                            <h4 class="post-title">{{ post['name'] }}</h4>
+                            <p class="company">{{ post['company'] }}</p>
+                            <p><strong>ELIGIBILITY:  </strong>{{ post['eligibility'] }}</p>
+                            <p><strong>Application opens:  </strong>{{ post['period'] }}</p>
+                            <p><a href="{{ post['link'] }}" class="btn btn-outline-info text-uppercase">Learn More</a></p>
+
+
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    <!-- Divider-->
+                    <hr class="my-4" />
+
+
+                    <h1 id="opensource">OPEN SOURCE</h1>
+                    {% for post in posts: %}
+                        {%if post['program']=="Open Source" %}
+                    <div class="post-preview">
+                            <h4 class="post-title">{{ post['name'] }}</h4>
+                            <p class="company">{{ post['company'] }}</p>
+                            <p><strong>ELIGIBILITY:  </strong>{{ post['eligibility'] }}</p>
+                            <p><strong>Application opens:  </strong>{{ post['period'] }}</p>
+                            <p><a href="{{ post['link'] }}" class="btn btn-outline-info text-uppercase">Learn More</a></p>
+
+
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    <!-- Divider-->
+                    <hr class="my-4" />
+
+                <h1 id="cp">Competitive Programming</h1>
+                    {% for post in posts: %}
+                        {%if post['program']=="Competitive Programming" %}
+
+                    <div class="post-preview">
+                            <h4 class="post-title">{{ post['name'] }}</h4>
+                            <p class="company">{{ post['company'] }}</p>
+                            <p><strong>ELIGIBILITY:  </strong>{{ post['eligibility'] }}</p>
+                            <p><strong>Application opens:  </strong>{{ post['period'] }}</p>
+                            <p><a href="{{ post['link'] }}" class="btn btn-outline-info text-uppercase">Learn More</a></p>
+
+
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                <h1 id="internships">INTERNSHIPS</h1>
+                    {% for post in posts: %}
+                        {%if post['program']=="Internship" %}
+                    <div class="post-preview">
+                            <h4 class="post-title">{{ post['name'] }}</h4>
+                            <p class="company">{{ post['company'] }}</p>
+                            <p><strong>ELIGIBILITY:  </strong>{{ post['eligibility'] }}</p>
+                            <p><strong>Application opens:  </strong>{{ post['period'] }}</p>
+                            <p><a href="{{ post['link'] }}" class="btn btn-outline-info text-uppercase">Learn More</a></p>
+
+
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    <!-- Divider-->
+                    <hr class="my-4" />
+
+
+                     <h1 id="community">COMMUNITY WORK</h1>
+                    {% for post in posts: %}
+                        {%if post['program']=="Community Work" %}
+                    <div class="post-preview">
+                            <h4 class="post-title">{{ post['name'] }}</h4>
+                            <p class="company">{{ post['company'] }}</p>
+                            <p><strong>ELIGIBILITY:  </strong>{{ post['eligibility'] }}</p>
+                            <p><strong>Application opens:  </strong>{{ post['period'] }}</p>
+                            <p><a href="{{ post['link'] }}" class="btn btn-outline-info text-uppercase">Learn More</a></p>
+
+
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    <!-- Divider-->
+                    <hr class="my-4" />
+
+                    </div>
+            </div>
+        </div>
+
+
+{% include 'footer.html' %}
